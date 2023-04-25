@@ -1,0 +1,47 @@
+.characteristic {
+  font-family: "Lato Regular", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0;
+  color: #444444;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 18px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    padding: 0;
+  }
+}
+
+.characteristic__title {
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 30px;
+    border-bottom: 1px solid #cdcdcd;
+    padding: 5px 6px 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 36px;
+  }
+}
+
+.characteristic__description {
+  padding: 0;
+  margin: 0 20px 0 0;
+  width: 100%;
+  justify-self: end;
+  text-align: end;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 32px 0 0;
+    border-bottom: 1px solid #cdcdcd;
+    padding: 4px 9px 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 30px 0 0;
+  }
+}

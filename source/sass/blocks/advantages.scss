@@ -1,0 +1,134 @@
+.advantages {
+  font-family: "Lato Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.advantages__wrapper {
+  margin: 0 20px 49px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0 107px 57px 30px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    max-width: 2500px;
+    border: none;
+    padding: 0 110px 82px;
+  }
+}
+
+.advantages__title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  margin: 0;
+  padding-bottom: 38px;
+  font-family: "Oswald", "Arial", sans-serif;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding: 3px 0 72px;
+  }
+}
+
+.advantages__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    counter-reset: index;
+    gap: 88px 138px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 79px;
+  }
+}
+
+.advantages__item {
+  padding-left: 80px;
+  position: relative;
+  background-repeat: no-repeat;
+
+  &--leaf {
+    background-image: url("../img/mobile-images/advantages/leaf.svg");
+  }
+
+  &--powder {
+    background-image: url("../img/mobile-images/advantages/powder.svg");
+  }
+
+  &--food {
+    background-image: url("../img/mobile-images/advantages/kitchen-appliances.svg");
+  }
+
+  &--time {
+    background-image: url("../img/mobile-images/advantages/alarm-clock.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+
+    &--leaf {
+      background-image: url("../img/tablet-images/advantages/leaf.svg");
+    }
+
+    &--powder {
+      background-image: url("../img/tablet-images/advantages/powder.svg");
+    }
+
+    &--food {
+      background-image: url("../img/tablet-images/advantages/kitchen-appliances.svg");
+    }
+
+    &--time {
+      background-image: url("../img/tablet-images/advantages/alarm-clock.svg");
+    }
+
+    &::before {
+      position: absolute;
+      right: 0;
+      font-size: 280px;
+      line-height: 280px;
+      top: -41px;
+      counter-increment: index;
+      content: counters(index, ".", decimal) " ";
+      color: #f2f2f2;
+      z-index: -1;
+      font-family: "Oswald", "Arial", sans-serif;
+      width: 130px;
+    }
+  }
+}
+
+.advantages__line-folding {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.advantages__description {
+  margin: 0;
+  min-height: 60px;
+
+  @media (min-width: $tablet-width) {
+    padding: 112px 0 45px;
+  }
+}

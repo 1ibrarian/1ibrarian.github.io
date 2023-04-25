@@ -1,0 +1,109 @@
+.address {
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.address__wrapper {
+  display: grid;
+  padding: 26px 7px;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background-color: #ffffff;
+  justify-items: center;
+
+  &--background {
+    background-color: #f2f2f2;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 296px;
+    padding: 60px 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: #ffffff;
+    width: 408px;
+    padding: 45px 77px 61px 78px;
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    gap: 90px;
+
+    &--background {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.address__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.address__description {
+  font-family: "Lato Regular", "Arial", sans-serif;
+  font-style: normal;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 13px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.address__city {
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding-top: 15px;
+  }
+}
+
+.address__map {
+  background-image: url("../img/mobile-images/map.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: ("../img/mobile-images/map@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/tablet-images/map.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: ("../img/tablet-images/map@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/desktop-images/map.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: ("../img/desktop-images/map@2x.png");
+    }
+  }
+}
+
+.address__location {
+  width: 100%;
+  margin: 0;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
+}

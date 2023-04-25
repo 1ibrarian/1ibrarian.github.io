@@ -1,0 +1,136 @@
+.supplement {
+  margin: 0;
+  border: none;
+  position: relative;
+  padding: 0 20px 16px;
+
+  &::before {
+    content: "";
+    height: 2px;
+    position: absolute;
+    background-color: #68b738;
+    bottom: 126%;
+    z-index: -1;
+    width: 93%;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 58px;
+
+    &::before {
+      width: 127%;
+      left: -22%;
+      bottom: 146%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 66px;
+    margin: 0;
+
+    &::before {
+      width: 113%;
+      left: -9%;
+      bottom: 175%;
+    }
+  }
+}
+
+.supplement__title {
+  font-size: 24px;
+  line-height: 26px;
+  background-color: #ffffff;
+  margin-left: -20px;
+  padding: 0 20px 38px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: -40px;
+    padding: 0 40px 57px;
+  }
+}
+
+.supplement__list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 42px 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 77px;
+  }
+}
+
+.supplement__item {
+  padding-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.supplement__label {
+  position: relative;
+}
+
+.supplement__input {
+  margin: 0;
+
+  @include visually-hidden;
+}
+
+.supplement__input:focus-within + .supplement__control-mark {
+  outline: 1px solid #000000;
+}
+
+.supplement__input:hover + .supplement__control-mark {
+  outline: 1px solid #bababa;
+}
+
+.supplement__control-mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  content: "";
+  border: 1px solid #cdcdcd;
+  left: 0;
+  top: -5px;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    margin: -5px 0;
+  }
+}
+
+.supplement__input[type="checkbox"]:checked + .supplement__control-mark::before {
+  background-image: url("../img/mobile-images/tick.svg");
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 16px;
+  content: "";
+  position: absolute;
+}
+
+.supplement__text {
+  font-size: 16px;
+  padding-left: 45px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 60px;
+  }
+}

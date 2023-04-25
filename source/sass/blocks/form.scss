@@ -1,0 +1,276 @@
+.form {
+  @media (min-width: $tablet-width) {
+    padding: 10px 40px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px 40px;
+  }
+}
+
+.form__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 72px;
+    padding: 0 0 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 0 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 79px;
+  }
+}
+
+.form__wrapper-cat-information {
+  display: flex;
+  align-items: center;
+}
+
+.form__label {
+  font-size: 16px;
+  padding-right: 13px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &--weight {
+    padding-right: 15px;
+  }
+
+  &--age {
+    padding-right: 3px;
+
+    @media (min-width: $tablet-width) {
+      padding-right: 13px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 13px;
+    }
+  }
+}
+
+.form__container {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  border: 1px solid #e7e7e7;
+  padding: 14px 15px;
+
+  &:focus-within {
+    outline: 1px solid #000000;
+  }
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border: 2px solid #444444;
+    outline: #444444;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.form__input {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  flex-grow: 1;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border-color: #444444;
+  }
+
+  &--cat-data {
+    border: 1px solid #e7e7e7;
+    padding: 14px 20px;
+  }
+
+  &--email,
+  &--mobile {
+    border: none;
+    outline: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 11px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    z-index: 1;
+  }
+}
+
+.form__input--email-error + .form__icon--error,
+.form__input--mobile-error + .form__icon--error {
+  stroke: rgba(255, 130, 130, 1);
+}
+
+.form__input:focus + .form__icon {
+  stroke: #68b738;
+}
+
+.form__icon {
+  padding-left: 5px;
+  fill: none;
+  stroke: #222222;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 13px;
+  }
+}
+
+.form__contact {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin: 0;
+  row-gap: 14px;
+  position: relative;
+  padding: 0 20px 20px;
+
+  &::before {
+    content: "";
+    height: 2px;
+    position: absolute;
+    background-color: #68b738;
+    bottom: 150%;
+    z-index: -1;
+    width: 93%;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 65px;
+
+    &::before {
+      content: "";
+      padding: 0 30px;
+      width: 111%;
+      left: -11%;
+      bottom: 148%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    padding: 0 0 67px;
+    gap: 78px;
+
+    &::before {
+      width: 113%;
+      bottom: 173%;
+    }
+  }
+}
+
+.form__title {
+  font-size: 24px;
+  line-height: 26px;
+  background-color: #ffffff;
+  margin-left: -20px;
+  padding: 23px 20px 35px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: -41px;
+    padding: 0 39px 77px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -41px;
+    padding: 0 40px 76px;
+  }
+}
+
+.form__title-background {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.form__wrapper-host {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.form__wrapper-request {
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.form__request {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border: none;
+  color: #ffffff;
+  background-color: #68b738;
+  cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 10px 44px;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    width: 45%;
+    padding: 17px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 16px 188px;
+    width: 47%;
+  }
+}
+
+.form__mandatory-field {
+  font-family: "Lato Regular", "Arial", sans-serif;
+  line-height: 16px;
+  text-align: center;
+  margin: 0;
+  padding: 21px 0 32px;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    padding: 17px 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 17px 72px;
+  }
+}
